@@ -36,6 +36,11 @@
             bindings = <&mo 2>;
             key-positions = <33 36>;
         };
+
+        mo-fn {
+            bindings = <&mo 4>;
+            key-positions = <32 37>;
+        };
     };
 
     keymap {
