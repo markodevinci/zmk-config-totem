@@ -30,7 +30,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        mo-sym {
+            bindings = <&mo 3>;
+            key-positions = <33 36>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
