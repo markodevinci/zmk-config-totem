@@ -37,31 +37,43 @@
         mo-sym {
             bindings = <&mo 3>;
             key-positions = <33 36>;
+            slow-release;
+            timeout-ms = <100>;
         };
 
         mo-fn {
             bindings = <&mo 4>;
             key-positions = <34 35>;
+            slow-release;
+            timeout-ms = <100>;
         };
 
         right-hyper {
             bindings = <&kp RS(RA(RC(RGUI)))>;
             key-positions = <16 17 18 19>;
+            slow-release;
+            timeout-ms = <100>;
         };
 
         left-hyper {
             bindings = <&kp LS(LA(LC(LGUI)))>;
             key-positions = <10 11 12 13>;
+            slow-release;
+            timeout-ms = <100>;
         };
 
         right-meh {
             bindings = <&kp RA(RC(RGUI))>;
             key-positions = <16 17 18>;
+            slow-release;
+            timeout-ms = <100>;
         };
 
         left-meh {
             bindings = <&kp LA(LC(LGUI))>;
             key-positions = <11 12 13>;
+            slow-release;
+            timeout-ms = <100>;
         };
     };
 
@@ -111,10 +123,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_MUTE        &kp K_VOLUME_DOWN  &kp K_VOLUME_UP    &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE  &kp C_AC_REDO
-           &kp LCTRL             &kp LALT              &kp LCMD          &kp LSHIFT         &none              &kp LEFT       &kp DOWN      &kp UP         &kp RIGHT       &kt CAPS
-&mkp MCLK  &mkp MB4              &mkp MB5              &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp C_NEXT         &kp HOME       &kp PG_DN     &kp PG_UP      &kp END         &kp INSERT     &kp DEL
-                                                       &trans            &trans             &trans             &trans         &trans        &trans
+           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_MUTE        &kp K_VOLUME_DOWN  &kp K_VOLUME_UP    &kp LC(SPACE)  &kp LG(SPACE)  &kp LA(SPACE)  &kp LA(LC(LG(SPACE)))  &kp LS(LA(LC(LG(SPACE))))
+           &kp LCTRL             &kp LALT              &kp LCMD          &kp LSHIFT         &none              &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT              &kt CAPS
+&mkp MCLK  &mkp MB4              &mkp MB5              &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp C_NEXT         &kp HOME       &kp PG_DN      &kp PG_UP      &kp END                &kp INSERT                 &kp DEL
+                                                       &trans            &trans             &trans             &trans         &trans         &trans
             >;
         };
 
