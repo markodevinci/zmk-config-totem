@@ -51,28 +51,24 @@
         right-hyper {
             bindings = <&kp RS(RA(RC(RGUI)))>;
             key-positions = <16 17 18 19>;
-            slow-release;
             timeout-ms = <100>;
         };
 
         left-hyper {
             bindings = <&kp LS(LA(LC(LGUI)))>;
             key-positions = <10 11 12 13>;
-            slow-release;
             timeout-ms = <100>;
         };
 
         right-meh {
             bindings = <&kp RA(RC(RGUI))>;
             key-positions = <16 17 18>;
-            slow-release;
             timeout-ms = <100>;
         };
 
         left-meh {
             bindings = <&kp LA(LC(LGUI))>;
             key-positions = <11 12 13>;
-            slow-release;
             timeout-ms = <100>;
         };
     };
