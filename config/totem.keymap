@@ -24,11 +24,18 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <200>;
+    quick-tap-ms = <100>;
     flavor = "tap-preferred";
+    tapping-term-ms = <170>;
 };
 
 &sk { quick-release; };
+
+&lt {
+    tapping-term-ms = <240>;
+    quick-tap-ms = <150>;
+    flavor = "balanced";
+};
 
 / {
     combos {
@@ -70,6 +77,19 @@
             bindings = <&kp LA(LC(LGUI))>;
             key-positions = <11 12 13>;
             timeout-ms = <100>;
+        };
+    };
+
+    behaviors {
+        hm: homerow-mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW-MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
         };
     };
 
