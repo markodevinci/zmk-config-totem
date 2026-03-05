@@ -249,10 +249,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                 &kp Q  &kp W  &kp E                  &kp R                  &kp T          &kp Y            &kp U         &kp I                      &kp O    &kp P
-                                 &kp A  &kp S  &kp D                  &kp F                  &kp G          &kp H            &kp J         &kp K                      &kp L    &kp SEMICOLON
-&mt_left_outer LEFT_SHIFT MINUS  &kp Z  &kp X  &kp C                  &kp V                  &kp B          &kp N            &kp M         &kp COMMA                  &kp DOT  &kp FSLH       &mt_right_outer RIGHT_SHIFT APOSTROPHE
-                                               &mt_left LEFT_ALT ESC  &mt_left LEFT_GUI TAB  &lt 1 SPACE    &lt 2 BACKSPACE  &lt 2 RETURN  &mt_right RIGHT_ALT EQUAL
+              &kp Q  &kp W  &kp E           &kp R      &kp T        &kp Y          &kp U         &kp I                      &kp O    &kp P
+              &kp A  &kp S  &kp D           &kp F      &kp G        &kp H          &kp J         &kp K                      &kp L    &kp SEMICOLON
+&kp CAPSLOCK  &kp Z  &kp X  &kp C           &kp V      &kp B        &kp N          &kp M         &kp COMMA                  &kp DOT  &kp FSLH       &mt_right_outer RIGHT_SHIFT APOSTROPHE
+                            &sk LEFT_SHIFT  &lt 1 TAB  &kp SPACE    &kp BACKSPACE  &lt 2 RETURN  &mt_right RIGHT_ALT EQUAL
             >;
         };
 
