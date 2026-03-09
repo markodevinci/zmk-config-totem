@@ -19,24 +19,6 @@
             bindings = <&kp ESC>;
         };
 
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <>;      // W + E
-            bindings = <&kp TAB>;
-        };
-
-        combo_lctrl {
-            timeout-ms = <50>;
-            key-positions = <>;    // A + S
-            bindings = <&kp LCTRL>;
-        };
-
-        combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <>;    // S + D
-            bindings = <&kp LALT>;
-        };
-
         // HYPER & CAPS combos (Requirement 1)
 
         combo_left_hyper {
@@ -46,25 +28,7 @@
             layers = <0>;
         };
 
-        combo_caps {
-            timeout-ms = <50>;
-            key-positions = <>;    // X + C
-            bindings = <&kp CAPSLOCK>;         // For software rebinds
-        };
-
         // Right Hand Punctuation Combos
-
-        combo_sqt {
-            timeout-ms = <50>;
-            key-positions = <>;      // I + O
-            bindings = <&kp SQT>;
-        };
-
-        combo_bslh {
-            timeout-ms = <50>;
-            key-positions = <>;      // O + P
-            bindings = <&kp BSLH>;
-        };
 
         combo_right_hyper {
             bindings = <&sk LS(LC(LA(LCMD)))>;
@@ -83,6 +47,12 @@
             key-positions = <17 18 19>;
             layers = <0>;
         };
+
+        combo-switch-windows {
+            bindings = <&kp LC(LA(LG(J)))>;
+            key-positions = <21 22>;
+            layers = <1>;
+        };
     };
 
     conditional_layers {
@@ -91,8 +61,8 @@
         // Activates Adjust/Bluetooth layer when holding both NAV and NUM
 
         adjust_layer {
-            if-layers = <NAV NUM>;
-            then-layer = <ADJ>;
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 
@@ -102,11 +72,22 @@
         base_layer {
             label = "BASE";
             bindings = <
-            &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y          &kp U        &kp I            &kp O    &kp P
-            &kp A  &kp S  &kp D     &kp F      &kp G        &kp H          &kp J        &kp K            &kp L    &kp SEMI
-&sk LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N          &kp M        &kp COMMA        &kp DOT  &kp FSLH  &kp SQT
-                          &sk LCMD  &lt 4 TAB  &kp SPACE    &kp BACKSPACE  &lt NUM RET  &mt EQUAL MINUS
+            &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y          &kp U      &kp I            &kp O    &kp P
+            &kp A  &kp S  &kp D     &kp F      &kp G        &kp H          &kp J      &kp K            &kp L    &kp SEMI
+&sk LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N          &kp M      &kp COMMA        &kp DOT  &kp FSLH  &kp SQT
+                          &sk LCMD  &lt 1 TAB  &kp SPACE    &kp BACKSPACE  &lt 3 RET  &mt EQUAL MINUS
             >;
+        };
+
+        action-nav_layer {
+            bindings = <
+           &kp N1                &kp N2                &kp N3                &kp N4                 &kp N5               &none     &none     &none   &none      &none
+           &sk LCTRL             &sk LALT              &sk LGUI              &sk LSHFT              &kp K_VOLUME_UP      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp TAB
+&kp GLOBE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp K_VOLUME_DOWN    &none     &none     &none   &none      &none    &none
+                                                       &trans                &trans                 &trans               &trans    &trans    &trans
+            >;
+
+            label = "ACT-NAV";
         };
 
         nav_layer {
@@ -137,17 +118,6 @@
 &trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans        &trans          &trans  &trans  &trans
             >;
-        };
-
-        num-nav {
-            bindings = <
-           &kp N1                &kp N2                &kp N3                &kp N4                 &kp N5               &none     &none     &none   &none      &none
-           &sk LCTRL             &sk LALT              &sk LGUI              &sk LSHFT              &kp K_VOLUME_UP      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp TAB
-&kp GLOBE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp K_VOLUME_DOWN    &none     &none     &none   &none      &none    &none
-                                                       &trans                &trans                 &trans               &trans    &trans    &trans
-            >;
-
-            label = "numbers-and-navigation";
         };
     };
 };
