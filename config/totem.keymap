@@ -15,39 +15,40 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;      // Q + W
+            key-positions = <22 23 24>;      // Q + W
             bindings = <&kp ESC>;
         };
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <1 2>;      // W + E
+            key-positions = <>;      // W + E
             bindings = <&kp TAB>;
         };
 
         combo_lctrl {
             timeout-ms = <50>;
-            key-positions = <10 11>;    // A + S
+            key-positions = <>;    // A + S
             bindings = <&kp LCTRL>;
         };
 
         combo_lalt {
             timeout-ms = <50>;
-            key-positions = <11 12>;    // S + D
+            key-positions = <>;    // S + D
             bindings = <&kp LALT>;
         };
 
         // HYPER & CAPS combos (Requirement 1)
 
-        combo_hyper {
+        combo_left_hyper {
             timeout-ms = <50>;
-            key-positions = <21 22>;    // Z + X
-            bindings = <&kp LS(LC(LA(LCMD)))>; // Native Hyper
+            key-positions = <10 11 12 13>;    // Z + X
+            bindings = <&sk LS(LC(LA(LCMD)))>; // Native Hyper
+            layers = <0>;
         };
 
         combo_caps {
             timeout-ms = <50>;
-            key-positions = <22 23>;    // X + C
+            key-positions = <>;    // X + C
             bindings = <&kp CAPSLOCK>;         // For software rebinds
         };
 
@@ -55,14 +56,32 @@
 
         combo_sqt {
             timeout-ms = <50>;
-            key-positions = <7 8>;      // I + O
+            key-positions = <>;      // I + O
             bindings = <&kp SQT>;
         };
 
         combo_bslh {
             timeout-ms = <50>;
-            key-positions = <8 9>;      // O + P
+            key-positions = <>;      // O + P
             bindings = <&kp BSLH>;
+        };
+
+        combo_right_hyper {
+            bindings = <&sk LS(LC(LA(LCMD)))>;
+            key-positions = <17 18 19 16>;
+            timeout-ms = <50>;
+        };
+
+        combo_left_meh {
+            bindings = <&sk LC(LA(LGUI))>;
+            key-positions = <10 11 12>;
+            layers = <0>;
+        };
+
+        combo_right_meh {
+            bindings = <&sk LC(LA(LGUI))>;
+            key-positions = <17 18 19>;
+            layers = <0>;
         };
     };
 
