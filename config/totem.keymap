@@ -50,7 +50,13 @@
 
         combo-switch-windows {
             bindings = <&kp LC(LA(LG(J)))>;
-            key-positions = <21 22>;
+            key-positions = <23 24>;
+            layers = <1>;
+        };
+
+        combo-mute {
+            bindings = <&kp K_MUTE>;
+            key-positions = <14 25>;
             layers = <1>;
         };
     };
