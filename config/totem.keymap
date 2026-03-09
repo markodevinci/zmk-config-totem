@@ -18,6 +18,7 @@
             key-positions = <10 11 12 13>;    // Z + X
             bindings = <&sk LS(LC(LA(LCMD)))>; // Native Hyper
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         // Right Hand Punctuation Combos
@@ -26,42 +27,49 @@
             bindings = <&sk LS(LC(LA(LCMD)))>;
             key-positions = <17 18 19 16>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         combo_left_meh {
             bindings = <&sk LC(LA(LGUI))>;
             key-positions = <10 11 12>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         combo_right_meh {
             bindings = <&sk LC(LA(LGUI))>;
             key-positions = <17 18 19>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         combo-switch-windows {
             bindings = <&kp LC(LA(LG(J)))>;
             key-positions = <23 24>;
             layers = <1>;
+            timeout-ms = <100>;
         };
 
         combo-mute {
             bindings = <&kp K_MUTE>;
             key-positions = <14 25>;
             layers = <1>;
+            timeout-ms = <100>;
         };
 
         left-cmd {
             bindings = <&sk LGUI>;
             key-positions = <11 12 13>;
             layers = <0>;
+            timeout-ms = <100>;
         };
 
         right-cmd {
             bindings = <&sk RGUI>;
             key-positions = <16 17 18>;
             layers = <0>;
+            timeout-ms = <100>;
         };
     };
 
