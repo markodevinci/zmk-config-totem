@@ -14,7 +14,6 @@
         // Left Hand Utilities
 
         combo_esc {
-            timeout-ms = <50>;
             key-positions = <22 23 24>;      // Q + W
             bindings = <&kp ESC>;
         };
@@ -22,7 +21,6 @@
         // HYPER & CAPS combos (Requirement 1)
 
         combo_left_hyper {
-            timeout-ms = <50>;
             key-positions = <10 11 12 13>;    // Z + X
             bindings = <&sk LS(LC(LA(LCMD)))>; // Native Hyper
             layers = <0>;
@@ -33,7 +31,7 @@
         combo_right_hyper {
             bindings = <&sk LS(LC(LA(LCMD)))>;
             key-positions = <17 18 19 16>;
-            timeout-ms = <50>;
+            layers = <0>;
         };
 
         combo_left_meh {
@@ -67,8 +65,8 @@
         // Activates Adjust/Bluetooth layer when holding both NAV and NUM
 
         adjust_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <2 2>;
+            then-layer = <3>;
         };
     };
 
@@ -81,7 +79,7 @@
             &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y          &kp U      &kp I            &kp O    &kp P
             &kp A  &kp S  &kp D     &kp F      &kp G        &kp H          &kp J      &kp K            &kp L    &kp SEMI
 &sk LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N          &kp M      &kp COMMA        &kp DOT  &kp FSLH  &kp SQT
-                          &sk LCMD  &lt 1 TAB  &kp SPACE    &kp BACKSPACE  &lt 3 RET  &mt EQUAL MINUS
+                          &sk LCMD  &lt 1 TAB  &kp SPACE    &kp BACKSPACE  &lt 2 RET  &mt EQUAL MINUS
             >;
         };
 
@@ -94,16 +92,6 @@
             >;
 
             label = "ACT-NAV";
-        };
-
-        nav_layer {
-            label = "NAV";
-            bindings = <
-        &kp LG(LBKT)  &kp C_BRI_UP  &kp C_VOL_UP  &kp LG(RBKT)  &trans    &trans    &kp PG_UP  &kp UP    &kp PG_DN  &trans
-        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &trans        &trans    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END
-&trans  &trans        &kp C_MUTE    &trans        &trans        &trans    &trans    &trans     &trans    &trans     &trans   &trans
-                                    &trans        &trans        &trans    &trans    &trans     &trans
-            >;
         };
 
         num_layer {
