@@ -14,7 +14,7 @@
         // Left Hand Utilities
         // HYPER & CAPS combos (Requirement 1)
 
-        combo_left_hyper {
+        left_hyper {
             key-positions = <10 11 12 13>;    // Z + X
             bindings = <&sk LS(LC(LA(LCMD)))>; // Native Hyper
             layers = <0>;
@@ -23,51 +23,58 @@
 
         // Right Hand Punctuation Combos
 
-        combo_right_hyper {
+        right_hyper {
             bindings = <&sk LS(LC(LA(LCMD)))>;
             key-positions = <17 18 19 16>;
             layers = <0>;
             timeout-ms = <125>;
         };
 
-        combo_left_meh {
+        left_meh {
             bindings = <&sk LC(LA(LGUI))>;
             key-positions = <11 12 13>;
             layers = <0>;
             timeout-ms = <125>;
         };
 
-        combo_right_meh {
+        right_meh {
             bindings = <&sk LC(LA(LGUI))>;
             key-positions = <17 18 16>;
             layers = <0>;
             timeout-ms = <125>;
         };
 
-        combo-switch-windows {
+        switch_windows {
             bindings = <&kp LC(LA(LG(J)))>;
             key-positions = <23 24>;
             layers = <1>;
             timeout-ms = <125>;
         };
 
-        combo-mute {
+        mute {
             bindings = <&kp K_MUTE>;
             key-positions = <14 25>;
             layers = <1>;
             timeout-ms = <125>;
         };
 
-        left-cmd {
-            bindings = <&sk LGUI>;
+        esc {
+            bindings = <&sk ESC>;
             key-positions = <23 22 24>;
             layers = <0>;
             timeout-ms = <125>;
         };
 
-        right-cmd {
-            bindings = <&sk RGUI>;
+        return {
+            bindings = <&sk RET>;
             key-positions = <27 28 29>;
+            layers = <0>;
+            timeout-ms = <125>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <20 31>;
             layers = <0>;
             timeout-ms = <125>;
         };
