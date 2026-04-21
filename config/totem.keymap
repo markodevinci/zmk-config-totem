@@ -158,6 +158,26 @@
             hold-trigger-key-positions = <34 32 33 25 24 23 12 13 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
             hold-trigger-on-release;
         };
+
+        sk_caps: sk_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SK_CAPS";
+            bindings = <&sk LSHFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        shft_smart: shft_smart {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHFT_SMART";
+            bindings = <&kp>, <&sk_caps>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
